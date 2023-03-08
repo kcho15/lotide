@@ -14,10 +14,10 @@ const eqArrays = function(array1, array2) {
 const assertArraysEqual = function(array1, array2) {
   // Check if the function eqArray was false
   if (!eqArrays(array1, array2)) {
-    console.log('💀💀💀 Assertion Failed'); 
+    console.log(`💀💀💀 Assertion Failed : ${array1} !== ${array2}`); 
     return; 
   }
-  console.log('✨✨✨ Assertion Passed');
+  console.log(`✨✨✨ Assertion Passed : ${array1} !== ${array2}`);
 }
 
 // assertArraysEqual([1,2,3],[1,2,3]); // output expected: pass
@@ -55,3 +55,8 @@ console.log(middle([1, 2, 3])) // => [2]
 console.log(middle([1, 2, 3, 4, 5])) // => [3]
 console.log(middle([1, 2, 3, 4])) // => [2, 3]
 console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
+
+const testArray1 = [3, 4, 6, 7, 9];
+const testArray2 = [3, 4, 6, 7, 9, 10];
+assertArraysEqual(middle(testArray1), [6]); // expected output: "Assertion Passed: [6] === [6]" 
+assertArraysEqual(middle(testArray2), [6]); // expected output: "Assertion Failed: [6, 7] !== [6]" 
