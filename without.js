@@ -26,7 +26,7 @@ const assertArraysEqual = function(array1, array2) {
     console.log(`💀💀💀 Assertion Failed : ${array1} !== ${array2}`); 
     return; 
   }
-  console.log(`✨✨✨ Assertion Passed : ${array1} !== ${array2}`);
+  console.log(`✨✨✨ Assertion Passed : ${array1} === ${array2}`);
 }
 
 // Function 'without' returns a subset of a given array, removing unwanted elements 
