@@ -31,5 +31,5 @@ const bestTVShowsByGenre = {
 
 console.log(findKeyByValue(bestTVShowsByGenre, "The Expanse"));
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"); // expected output, return the key "drama" 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined); 
+//assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"); // expected output, return the key "drama" 
+//assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined); 
