@@ -60,5 +60,5 @@ const shirt7 = { size: "medium", colors: ["red", "blue"] }; // same as shirt 4
 assertEqual(eqObjects(shirt1 , shirt2), true); // => true
 assertEqual(eqObjects(shirt1, shirt3), false); // => false
 assertEqual(eqObjects(shirt4  , shirt5), true); // => true
-assertEqual(eqObjects(shirt3  , shirt6), true); // => true **shirt3 and shirt6 have different values for colors 
+assertEqual(eqObjects(shirt3  , shirt6), true); // => true **shirt3 and shirt6 have different values for colors?? 
 assertEqual(eqObjects(shirt1  , shirt7), true); // => true
