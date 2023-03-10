@@ -26,21 +26,41 @@ const assertArraysEqual = function(array1, array2) {
 // assertArraysEqual([1,2,3],[3,2,1]); // output expected: fail 
 // assertArraysEqual([1,2,3],[1,2,3,4]); // output expected: fail 
 
-const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] !== " ") { // Skip whitespace as a key
-      let letterKey = sentence[i] // Each element of sentence will form a key 
-      // Check if the value exists already first
-      if (!results[letterKey]) {
-        results[letterKey] = [i] // Add current index position to object "results" as value to letter key 
-      } else {
-        results[letterKey].push(i); // Push the index to the existing array for that letter key   
-      }
+// const letterPositions = function(sentence) {
+//   const results = {};
+//   for (let i = 0; i < sentence.length; i++) {
+//     if (sentence[i] !== " ") { // Skip whitespace as a key
+//       let letterKey = sentence[i] // Each element of sentence will form a key 
+//       // Check if the value exists already first
+//       if (!results[letterKey]) {
+//         results[letterKey] = [i] // Add current index position to object "results" as value to letter key 
+//       } else {
+//         results[letterKey].push(i); // Push the index to the existing array for that letter key   
+//       }
+//     }
+//   }  
+//   return results;
+// }; 
+
+// Day 5 code review and revision 
+
+const letterPositions = function(str) {
+  const results = {}; 
+
+  for (let i in str) {      // Same as c-style for loop 
+    const letter = str[i];
+
+    if (letter === ' ') {   // Skip whitespace with continue  
+      continue; 
     }
-  }  
-  return results;
-}; 
+
+    if (!results[letter]) { // Create an empty array 
+      results[letter] = [];
+    }
+    
+    results[letters].push(i); // Happy path 
+  }
+}
 
 console.log(letterPositions("lighthouse in the house")); 
 

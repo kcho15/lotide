@@ -24,19 +24,36 @@ const assertArraysEqual = function(array1, array2) {
 // function keeps going until the callback/prediate returns a truthy value 
 // callback function should only be provided one value: the item in the array 
 
-const takeUntil = function(array, callback) {
+// const takeUntil = function(array, callback) {
 
+//   const results = [];
+//   for (let item of array) {
+//     if (!callback(item)) {        // calling the callback function with argument "item" 
+//       results.push(item)          // if falsey, continue to push the item to resultsif (callback(item)) {
+//     } else {
+//       return results;
+//     }
+//   };
+//   return results;
+// };
+
+// Day 5 review and revision, version 2
+
+const takeUntil = function(array, callback) {
   const results = [];
-  for (let item of array) {
-    if (!callback(item)) {        // calling the callback function with argument "item" 
-      results.push(item)          // if falsey, continue to push the item to resultsif (callback(item)) {
-    } else {
+
+  for (const item of array) {   // for..of is go-to for arrays, we do not need [i] from c-style loop
+    if(callback(item)) {
       return results;
-    }
-  };
-  return results;
-};
-   
+    } 
+
+    results.push(item); 
+  }
+
+  return results; 
+}
+
+
 //Tests
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
