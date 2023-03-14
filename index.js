@@ -11,15 +11,15 @@ const takeUntil = require('./takeUntil')
 const eqArrays = require('./eqArrays')
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  eqArrays: eqArrays,
-  findKey: findKey,
-  map: map, 
-  countLetters: countLetters,
-  without: without, 
-  takeUntil: takeUntil,
-  eqArrays: eqArrays
+  head,
+  tail,
+  middle,
+  eqArrays,
+  findKey,
+  map, 
+  countLetters,
+  without, 
+  takeUntil,
+  eqArrays
 
 }; 
