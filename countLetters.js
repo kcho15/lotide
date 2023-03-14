@@ -30,5 +30,5 @@ const countLetters = function(str) {
   return result; 
 }
 
-console.log(countLetters("LHL")) // expected { L: 2, H: 1 }
-console.log(countLetters("lighthouse in the house"))
+
+module.exports = {countLetters};

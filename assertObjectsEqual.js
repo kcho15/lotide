@@ -52,6 +52,6 @@ const assertObjectsEqual = function(actual, expected) {
 };
 
 // Test
-const thing1 = { name: "foo" }
-const thing2 = { name: "foo" }
-assertObjectsEqual(thing1, thing2) 
+// const thing1 = { name: "foo" }
+// const thing2 = { name: "foo" }
+// assertObjectsEqual(thing1, thing2) 
