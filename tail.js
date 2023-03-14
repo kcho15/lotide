@@ -7,4 +7,9 @@ const tail = function(input) {
   return input.slice(1);
 };
 
-module.exports = {tail}; 
+const words = ["hello", "darkness" , "my old friend"]
+const nums = [1, 2, 3, 4, 5]
+console.log(tail(words)); 
+console.log(tail(nums)); 
+
+module.exports = tail; 

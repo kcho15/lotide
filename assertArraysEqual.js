@@ -1,4 +1,4 @@
-const {eqArrays} = require('./eqArrays')
+const eqArrays = require('./eqArrays')
 
 const assertArraysEqual = function(array1, array2) {
   // Check if the function eqArray was false
@@ -9,4 +9,4 @@ const assertArraysEqual = function(array1, array2) {
   console.log(`✨✨✨ Assertion Passed : ${array1} === ${array2}`);
 }
 
-module.exports = {assertArraysEqual};
+module.exports = assertArraysEqual;

@@ -1,16 +1,24 @@
 // Requires
-const {assertArraysEqual} = require('../assertArraysEqual'); 
-const {middle} = require('../middle');
+const assert = require('chai').assert;
+const assertArraysEqual = require('../assertArraysEqual'); 
+const middle = require('../middle');
 
-// Tests
-console.log(middle([1])) // => []
-console.log(middle([1, 2])) // => []
-console.log(middle([1, 2, 3])) // => [2]
-console.log(middle([1, 2, 3, 4, 5])) // => [3]
-console.log(middle([1, 2, 3, 4])) // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
+describe("#middle", () => {
 
-const testArray1 = [3, 4, 6, 7, 9];
-const testArray2 = [3, 4, 6, 7, 9, 10];
-assertArraysEqual(middle(testArray1), [6]); // expected output: "Assertion Passed: [6] === [6]" 
-assertArraysEqual(middle(testArray2), [6]); // expected output: "Assertion Failed: [6, 7] !== [6]" 
+  it("returns [] for [1]", () => {
+    assert.deepEqual(middle([1]), []); 
+  });
+
+  it("returns [] for [1,2]", () => {
+    assert.deepEqual(middle([1,2]), []); 
+  });
+
+  it("returns [2] for [1, 2, 3]", () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]); 
+  });
+
+  it("returns [2, 3] for [1, 2, 3, 4]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]); 
+  });
+
+});

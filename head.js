@@ -6,4 +6,4 @@ const head = function(input) {
   return result; 
 }
 
-module.exports = {head}; 
+module.exports = head; 
