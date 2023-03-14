@@ -5,7 +5,7 @@ const {tail} = require('../tail');
 describe("#tail", () => {
   
   it("returns [] for []", () => {
-    assert.deepEqual(tail([]), []); // Need to change assert. type 
+    assert.deepEqual(tail([]), []);  
   });
 
   it("returns ['darkness' , 'my old friend'] for ['hello', 'darkness' , 'my old friend']", () => {
